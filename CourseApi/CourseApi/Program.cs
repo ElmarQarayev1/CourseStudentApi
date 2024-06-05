@@ -18,10 +18,14 @@ builder.Services.AddDbContext<AppDbContext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
 
+
+
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddFluentValidationClientsideAdapters();
 builder.Services.AddValidatorsFromAssemblyContaining<CourseCreateDtoValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<StudentCreateDtoValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<StudentUpdateDtoValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<CourseUpdateDtoValidator>();
 
 builder.Services.AddFluentValidationRulesToSwagger();
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/elmar/Desktop/CodeAcademy/API/CourseApi/CourseApi/CourseApi/CourseApi.csproj": {}
+    "/Users/elmar/Desktop/CodeAcademy/API/CourseStudentApi/CourseApi/CourseApi/CourseApi.csproj": {}
   },
   "projects": {
-    "/Users/elmar/Desktop/CodeAcademy/API/CourseApi/CourseApi/CourseApi/CourseApi.csproj": {
+    "/Users/elmar/Desktop/CodeAcademy/API/CourseStudentApi/CourseApi/CourseApi/CourseApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/elmar/Desktop/CodeAcademy/API/CourseApi/CourseApi/CourseApi/CourseApi.csproj",
+        "projectUniqueName": "/Users/elmar/Desktop/CodeAcademy/API/CourseStudentApi/CourseApi/CourseApi/CourseApi.csproj",
         "projectName": "CourseApi",
-        "projectPath": "/Users/elmar/Desktop/CodeAcademy/API/CourseApi/CourseApi/CourseApi/CourseApi.csproj",
+        "projectPath": "/Users/elmar/Desktop/CodeAcademy/API/CourseStudentApi/CourseApi/CourseApi/CourseApi.csproj",
         "packagesPath": "/Users/elmar/.nuget/packages/",
-        "outputPath": "/Users/elmar/Desktop/CodeAcademy/API/CourseApi/CourseApi/CourseApi/obj/",
+        "outputPath": "/Users/elmar/Desktop/CodeAcademy/API/CourseStudentApi/CourseApi/CourseApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/elmar/.nuget/NuGet/NuGet.Config"
