@@ -1,13 +1,13 @@
 ﻿using System;
 namespace CourseApi.Dtos.CourseDtos
 {
-	public class CourseUpdateDto
+	public class CourseDetailsDto
 	{
-		public int Id { get; set; }
-
 		public string Name { get; set; }
 
         public byte Limit { get; set; }
+
+		public int StudentCount { get; set; }
     }
 }
 

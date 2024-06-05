@@ -1,40 +1,50 @@
 ﻿<Properties StartupConfiguration="{97A67FCE-EB80-4C91-B7AB-3B47A288C8D3}|https">
-  <MonoDevelop.Ide.ItemProperties.CourseApi PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CourseApi/Controllers/CoursesController.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/elmar/Desktop/CodeAcademy/API/CourseApi/CourseApi/CourseApi/Migrations/20240605073136_studentadded.cs" relfile="CourseApi/Migrations/20240605073136_studentadded.cs" line="20" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="CourseApi/Controllers/StudentController.cs">
     <Files>
       <File FileName="CourseApi/Program.cs" />
-      <File FileName="CourseApi/Controllers/CoursesController.cs" Line="67" Column="10" />
+      <File FileName="CourseApi/Controllers/CoursesController.cs" />
       <File FileName="CourseApi/Data/Entities/Course.cs" />
       <File FileName="CourseApi/appsettings.json" />
       <File FileName="CourseApi/AppDbContext.cs" />
-      <File FileName="CourseApi/Migrations/20240603220838_CourseCreated.cs" />
       <File FileName="CourseApi/Dtos/CourseDtos/CourseGetAllDto.cs" />
-      <File FileName="CourseApi/Dtos/CourseDtos/CourseGetIdDto.cs" />
       <File FileName="CourseApi/Dtos/CourseDtos/CourseCreateDto.cs" />
       <File FileName="CourseApi/Dtos/CourseDtos/CourseUpdateDto.cs" />
+      <File FileName="CourseApi/Data/Entities/AuditEntity.cs" />
+      <File FileName="CourseApi/Data/Entities/BaseEntity.cs" />
+      <File FileName="CourseApi/Data/Entities/Student.cs" />
+      <File FileName="CourseApi/Data/Configurations/CourseConfiguration.cs" />
+      <File FileName="CourseApi/Data/Configurations/StudentConfiguration.cs" />
+      <File FileName="CourseApi/Controllers/StudentController.cs" Line="33" Column="47" />
+      <File FileName="CourseApi/Dtos/StudentDtos/StudentGetAllDto.cs" />
+      <File FileName="CourseApi/Dtos/StudentDtos/StudentCreateDto.cs" />
+      <File FileName="CourseApi/Migrations/20240605090554_createdtables.cs" />
+      <File FileName="CourseApi/Dtos/StudentDtos/StudentUpdateDto.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CourseApi">
+          <Node name="CourseApi" expanded="True">
             <Node name="CourseApi">
               <Node name="Controllers" expanded="True">
-                <Node name="CoursesController.cs" selected="True" />
+                <Node name="StudentController.cs" selected="True" />
               </Node>
               <Node name="Data" expanded="True">
+                <Node name="Configurations" expanded="True" />
                 <Node name="Entities" expanded="True" />
               </Node>
-              <Node name="Dtos" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.CourseApi PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>

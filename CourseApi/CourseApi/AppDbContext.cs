@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Reflection;
 using Azure;
+using CourseApi.Data.Configurations;
 using CourseApi.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -15,10 +17,15 @@ namespace CourseApi
 
         }
         public DbSet<Course> Courses { get; set; }
-      
-        protected override void OnModelCreating(ModelBuilder builder)
+
+       public DbSet<Student> Students { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(builder);
+           modelBuilder.ApplyConfiguration(new StudentConfiguration());
+           modelBuilder.ApplyConfiguration(new CourseConfiguration());
+
+            base.OnModelCreating(modelBuilder);
         }
 
     }

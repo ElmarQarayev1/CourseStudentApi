@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using CourseApi.Data.Entities;
 using CourseApi.Dtos.CourseDtos;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CourseApi.Controllers
@@ -29,7 +30,10 @@ namespace CourseApi.Controllers
                 .Take(pageSize)
                 .Select(x => new CourseGetAllDto
                 {
-                    Name = x.Name
+                    Name = x.Name,
+                    Limit=x.Limit,
+                    StudentCount=x.Students.Count
+
                 })
                 .ToList();
 
@@ -37,16 +41,17 @@ namespace CourseApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<CourseGetIdDto> GetById(int id)
+        public ActionResult<CourseDetailsDto> GetById(int id)
         {
             var data = _context.Courses.Find(id);
             if (data == null)
             {
                 return StatusCode(404, data);
             }
-            CourseGetIdDto courseGetIdDto = new CourseGetIdDto()
+            CourseDetailsDto courseGetIdDto = new CourseDetailsDto()
             {
-                Name = data.Name
+                Name = data.Name,
+                Limit=data.Limit
             };
 
             return StatusCode(200, courseGetIdDto);
@@ -55,9 +60,13 @@ namespace CourseApi.Controllers
         [HttpPost("")]
         public ActionResult Create(CourseCreateDto courseDto)
         {
+            if (_context.Courses.Any(x => x.Name == courseDto.Name && !x.IsDeleted))
+                return StatusCode(409);
+
             Course course = new Course
             {
-                Name = courseDto.Name
+                Name = courseDto.Name,
+                Limit=courseDto.Limit
             };
 
             _context.Courses.Add(course);
@@ -69,17 +78,39 @@ namespace CourseApi.Controllers
         [HttpPut("{id}")]
         public ActionResult Update(CourseUpdateDto courseUpdateDto)
         {
+            if (_context.Courses.Any(x => x.Name == courseUpdateDto.Name && !x.IsDeleted))
+                return StatusCode(409);
+
             var existingCourse = _context.Courses.Find(courseUpdateDto.Id);
             if (existingCourse == null)
             {
                 return StatusCode(404, courseUpdateDto);
             }
             existingCourse.Name = courseUpdateDto.Name;
+            existingCourse.Limit = courseUpdateDto.Limit;
+            existingCourse.ModifiedAt = DateTime.Now;
 
             _context.Courses.Update(existingCourse);
             _context.SaveChanges();
 
             return StatusCode(200);
         }
+
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
+        {
+            var existingCourse = _context.Courses.Find(id);
+            if (existingCourse == null)
+            {
+                return StatusCode(404,existingCourse);
+            }
+
+            existingCourse.IsDeleted = true;
+            _context.Courses.Update(existingCourse);
+            _context.SaveChanges();
+
+            return StatusCode(204);
+        }
+
     }
 }

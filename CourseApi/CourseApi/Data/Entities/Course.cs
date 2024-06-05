@@ -1,15 +1,17 @@
 ﻿using System;
 namespace CourseApi.Data.Entities
 {
-	public class Course
+	public class Course:AuditEntity
 	{
-		public int Id { get; set; }
+		
 
 		public string Name { get; set; }
 
-		public DateTime CreateAt { get; set; }
+		public byte Limit { get; set; }
 
-		public DateTime ModifiedAt { get; set; }
+		public List<Student> Students { get; set; }
+
+		
 	}
 }
 

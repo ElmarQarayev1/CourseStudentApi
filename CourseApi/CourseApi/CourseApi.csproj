@@ -17,6 +17,8 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.16" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="MicroElements.Swashbuckle.FluentValidation" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +27,8 @@
     <None Remove="Data\Entities\" />
     <None Remove="Dtos\" />
     <None Remove="Dtos\CourseDtos\" />
+    <None Remove="Data\Configurations\" />
+    <None Remove="Dtos\StudentDtos\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -32,5 +36,7 @@
     <Folder Include="Data\Entities\" />
     <Folder Include="Dtos\" />
     <Folder Include="Dtos\CourseDtos\" />
+    <Folder Include="Data\Configurations\" />
+    <Folder Include="Dtos\StudentDtos\" />
   </ItemGroup>
 </Project>
