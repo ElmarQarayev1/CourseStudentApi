@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{97A67FCE-EB80-4C91-B7AB-3B47A288C8D3}|https">
+  <MonoDevelop.Ide.ItemProperties.CourseApi PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CourseApi/Controllers/CoursesController.cs">
+    <Files>
+      <File FileName="CourseApi/Program.cs" />
+      <File FileName="CourseApi/Controllers/CoursesController.cs" Line="67" Column="10" />
+      <File FileName="CourseApi/Data/Entities/Course.cs" />
+      <File FileName="CourseApi/appsettings.json" />
+      <File FileName="CourseApi/AppDbContext.cs" />
+      <File FileName="CourseApi/Migrations/20240603220838_CourseCreated.cs" />
+      <File FileName="CourseApi/Dtos/CourseDtos/CourseGetAllDto.cs" />
+      <File FileName="CourseApi/Dtos/CourseDtos/CourseGetIdDto.cs" />
+      <File FileName="CourseApi/Dtos/CourseDtos/CourseCreateDto.cs" />
+      <File FileName="CourseApi/Dtos/CourseDtos/CourseUpdateDto.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CourseApi">
+            <Node name="CourseApi">
+              <Node name="Controllers" expanded="True">
+                <Node name="CoursesController.cs" selected="True" />
+              </Node>
+              <Node name="Data" expanded="True">
+                <Node name="Entities" expanded="True" />
+              </Node>
+              <Node name="Dtos" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
